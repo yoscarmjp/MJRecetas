@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="src/img/logo.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="src/img/logo.webp" type="image/x-icon">
     <title>MJRecetas | Inicio</title>
 </head>
 <body>
 
-    <header class="flex justify-around pt-8 shadow-xs z-50">
+    <header id="index" class="pt-8 flex shadow-sm z-50 flex-col justify-center items-center md:flex-row md:justify-around">
         <div class="w-24 -mt-5">
-            <a href="index.html"><img src="src/img/logo.jpg"></a>
+            <a href="index.html"><img src="src/img/logo.webp"></a>
         </div>
         <nav>
             <ul class="pt-5">
@@ -29,43 +29,91 @@
 
 
     <div class="relative">
-        <img src="src/img/banner.png" class="w-full filter brightness-50">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <h1 class="text-3xl text-center font-bold mb-4">
+        <img src="src/img/banner.webp" class="w-full h-full filter brightness-50">
+        <div class="absolute inset-0 mt-5 md:mt-3 flex flex-col items-center justify-center text-white">
+            <h1 class="text-lg text-center font-bold md:text-2xl xl:text-3xl">
                 Descubre, Cocina y Comparte tus Recetas Favoritas
             </h1>
-            <p class="max-w-3xl text-center">
+            <p class="max-w-3xl text-center text-base md:text-lg">
                 Bienvenido a MJ Recetario, tu espacio para descubrir recetas 
                 increíbles, fáciles de seguir y llenas de sabor. Explora nuestras 
                 categorías, guarda tus recetas favoritas, y comparte tus propias 
                 creaciones con nuestra comunidad. ¡Inspírate y empieza a cocinar hoy 
                 mismo!
             </p>
-            <button class="bg-white text-black font-bold py-2 mt-5 px-5 rounded-lg cursor-pointer">Conocer recetas</button>
+            <button class="bg-white hidden md:block text-black font-semibold py-2 mt-5 px-5 rounded-lg cursor-pointer border-2 hover:bg-transparent hover:text-white transition duration-300 ease-in-out">Conocer recetas</button>
         </div>
     </div>
 
 
-    <div class="flex justify-between flex-col pt-16">
-
+    <div class="flex justify-between flex-col pt-16 pb-24">
         <h1 class="font-bold text-4xl text-center pb-7">Recetas Destacadas</h1>
         <p class="text-center -mt-6 mb-8 text-lg">Las recetas mas destacadas de nuestra web</p>
 
-        <div class="flex flex-row justify-center items-center">
-            <div class="w-60 h-64 border-2 border-gray-400 p-6 text-black m-3 rounded-xl text-center">
-                <h1>Caja 1</h1>
+        <div class="flex flex-row flex-wrap justify-center items-center">
+            <div class="w-60 h-auto border-2 border-gray-300  text-black m-3 rounded-xl text-center">
+                <img src="src/img/rice.webp" class="w-full rounded-xl">
+                <h1 class="text-lg font-bold">Arroz con Maíz</h1>
+                <p class="text-sm text-justify p-4 -mt-4">
+                    Una deliciosa combinación de arroz esponjoso con maíz tierno, 
+                    acompañada de tocineta crujiente para un toque extra de sabor. 
+                    Un plato fácil y reconfortante perfecto para cualquier ocasión.
+                </p>
+                <button id="rice" class="bg-transparent border-2 border-black transition duration-300 ease-in-out text-black p-2
+                rounded-lg -mt-1 font-semibold hover:bg-black hover:text-white mb-4">Conocer la receta</button>
             </div>
-            <div class="w-60 h-64 border-2 border-gray-400 p-6 text-black m-3 rounded-xl text-center">
-                <h1>Caja 2</h1>
+            <div class="w-60 h-auto border-2 border-gray-300  text-black m-3 rounded-xl text-center">
+                <img src="src/img/chicken.webp" class="w-full rounded-xl">
+                <h1 class="text-lg font-bold text">Pollo Guisado</h1>
+                <p class="text-sm text-justify p-4 -mt-4">
+                    Sabrosas piezas de pollo doradas y cocidas a fuego lento en un guiso 
+                    lleno de sabor, acompañadas de una guarnición de vegetales que resalta 
+                    la frescura de los ingredientes.
+                </p>
+                <button id="chicken" class="bg-transparent border-2 border-black transition duration-300 ease-in-out text-black p-2
+                rounded-lg -mt-1 font-semibold hover:bg-black hover:text-white mb-4">Conocer la receta</button>
             </div>
-            <div class="w-60 h-64 border-2 border-gray-400 p-6 text-black m-3 rounded-xl text-center">
-                <h1>Caja 3</h1>
+            <div class="w-60 h-auto border-2 border-gray-300 text-black m-3 rounded-xl text-center">
+                <img src="src/img/fish.webp" class="w-full rounded-xl">
+                <h1 class="text-lg font-bold">Pescado Frito</h1>
+                <p class="text-sm text-justify p-4 -mt-4">
+                    Pescado fresco frito a la perfección, acompañado de rodajas 
+                    de limón y ensalada. Este plato ofrece una textura crujiente 
+                    por fuera y jugosa por dentro, ideal para los amantes del marisco.
+                </p>
+                <button id="fish" class="bg-transparent border-2 border-black transition duration-300 ease-in-out text-black p-2
+                rounded-lg -mt-1 font-semibold hover:bg-black hover:text-white mb-4">Conocer la receta</button>
             </div>
-            
-
         </div>
-
     </div>
+
+    <div class="w-full h-px bg-black px-28 mt-20"></div>
+
+    <footer class="flex flex-col justify-center item-center pt-8 pb-5 lg:justify-around lg:flex-row">
+        <div class="flex justify-center flex-col items-center">
+            <a href="#index"><img class="w-24" src="src/img/logo.webp"></a>
+            <p class="text-base -mt-2 max-w-1">&copy; <span class="font-bold">2024 MJRecetas.</span> All Rights Reserved.</p>
+        </div>
+        <div class="flex flex-col m-3 justify-center items-center lg:items-start font-medium">
+            <a href="" class="mb-2 hover:underline">Privacy Policy</a>
+            <a href="" class="mb-2 hover:underline">Terms of Service</a>
+            <a href="" class="hover:underline">Cookie Policy</a>
+        </div>
+        <div class="flex flex-col m-3 justify-center items-center lg:items-start font-medium">
+            <a href="" class="mb-2 hover:underline">About Us</a>
+            <a href="" class="mb-2 hover:underline">Contact</a>
+            <a href="" class="hover:underline">FAQs</a>
+        </div>
+        <div class="flex flex-col m-3 justify-center items-center lg:items-start font-medium">
+            <a href="" class="mb-2 hover:underline">Sitemap</a>
+            <a href="" class="hover:underline">All Recipes</a>
+        </div>
+        <div class="text-2xl pt-3 flex  justify-center items-center">
+            <a href=""><i class='bx bxl-instagram m-2 hover:text-gray-500 transition duration-300 ease-in-out'></i></a>
+            <a href=""><i class='bx bxl-facebook m-2 hover:text-gray-500 transition duration-300 ease-in-out' ></i></a>
+            <a href=""><i class='bx bxl-twitter m-2 hover:text-gray-500 transition duration-300 ease-in-out' ></i></a>
+        </div>
+    </footer>
 
 </body>
 </html>
